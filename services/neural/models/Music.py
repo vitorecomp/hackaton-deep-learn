@@ -7,6 +7,7 @@ class Music(Base):
 	id = Column(Integer, primary_key=True)
 	name = Column(String)
 	valor = Column(JSON)
+	group = 0
 	
 	def __init__(self, f1):
 		self.name  = f1['metadata']['songs'][0][-2]
@@ -18,5 +19,12 @@ class Music(Base):
 		self.valor = []
 		for data in dataset: 
 			self.valor.append(np.mean(data))
+		
+	def toObject(self):
+		return {
+			nome:self.valor,
+			valor:self.valor,
+			group:self.group
+		}
 		
 
