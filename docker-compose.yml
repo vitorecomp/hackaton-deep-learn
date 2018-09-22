@@ -1,0 +1,38 @@
+version: '2.1'
+
+services:
+  ##############################################################################
+  #Application
+  ##############################################################################
+
+  #tem que fazer subir o docker da aplicacao, usar pm2, ou o node normal??
+
+  ##############################################################################
+  #BANCOS DE DADOS
+  ##############################################################################
+
+  postgresql:
+    extends:
+      file: ./services/postgresql/docker-compose.yml
+      service: postgresql
+    networks:
+      backing-services:
+        ipv4_address: 172.16.238.101
+
+
+networks:
+    backing-services:
+      name: backing-services
+      driver: bridge
+      enable_ipv6: true
+      ipam:
+        driver: default
+        config:
+        - subnet: 172.16.238.0/24
+          gateway: 172.16.238.1
+        - subnet: 2001:3984:3989::/64
+          gateway: 2001:3984:3989::1
+
+volumes:
+  postgresdata:
+    name: postgresdata
