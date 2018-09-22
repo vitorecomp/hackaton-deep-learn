@@ -34,5 +34,5 @@ networks:
           gateway: 2001:3984:3989::1
 
 volumes:
-  postgresdata:
-    name: postgresdata
+  postgresdatahack:
+    name: postgresdatahack

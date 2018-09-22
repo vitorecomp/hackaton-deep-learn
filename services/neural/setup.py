@@ -13,5 +13,5 @@ setup(
     author_email='vitor.ecomp@gmail.com',
     url='',
 
-    install_requires=['sqlalchemy']
+    install_requires=['sqlalchemy', 'h5py', 'numpy', 'psycopg2']
 )
