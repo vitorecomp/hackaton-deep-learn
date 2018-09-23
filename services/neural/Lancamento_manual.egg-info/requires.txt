@@ -2,3 +2,4 @@ sqlalchemy
 h5py
 numpy
 psycopg2
+scipy

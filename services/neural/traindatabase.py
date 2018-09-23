@@ -23,10 +23,9 @@ def main():
 
 	musics = session.query(Music).all()
 
-	splited, distances = Kmeans.split(musics)
+	musics, distances = Kmeans.split(musics)
 
-	print distances
-
+	session.commit()
 	return
 
 
