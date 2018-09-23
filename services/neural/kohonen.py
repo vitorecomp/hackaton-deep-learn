@@ -27,7 +27,9 @@ def main():
 		
 	data = np.array(data).reshape(len(data), 12)
 	
-	run(data)
+	run(data, musics)
+
+	session.commit()
 		
 
 if __name__ == "__main__":

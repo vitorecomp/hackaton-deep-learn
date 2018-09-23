@@ -22,13 +22,18 @@ def main():
 
 	musics = session.query(Music).all()
 
-	sp = spotipy.Spotify(auth='BQDyNpPgcHMWLbwUH_cIxYikmsJ79otlNpNvr-pcOT-iAcB_lhF44_JmzTvwUXHohfhIiIYHp33WyOkAkiKa3_4GFKUjaQGHH3Uh4A4HRXsCN2aK99IjW2pw0M9j_i7ZOP-XK4RAGFHfohJ0lVft2fY7ZKZANKbZnE3PQW0T19nyV9UQd5IZ6WWt-nee')
+	sp = spotipy.Spotify(auth='BQBknton4DmVtIQ3h6d-EpLhKPZf9FjBaZ4NrdGlR-DZvvGd7EChocrPzrcYUW2wRiqVFyh7s_QbHM3REuK2qHsLc0cDxEi9MKoI_b7K8wypQCJQFTpP_uxtW3aU0WJjcbDO_szd5VQgrVuAPnNIJ_9UqLKuUU_3IKzelHF2GVA57BFQWC8_V73jTEzG')
 
-	for music in musics:
-		if(music.hasActivity()):
+	for musicap in musics:
+		if(musicap.hasId()):
 			print 'already has'
-		results = sp.search(q='track:Otherside artist:Red hot', type='track')
-		print json.dumps(results, indent=4, sort_keys=True)
+		music = musicap.toObject() 
+		results = sp.search(q='track:' + music['nome'] +' artist:' + music['artist'] , type='track')
+		#if(not results['tracks']):
+		#	pass
+			#set para nao buscar a musica
+		lista = results['tracks']['items']
+		print json.dumps(lista[0], indent=4, sort_keys=True)
 		#busca a musica no spotify e salva o genero
 		#se o spotify tiver caido, lascou tudo, e finaliza o programa
 		

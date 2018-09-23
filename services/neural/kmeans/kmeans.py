@@ -19,7 +19,7 @@ class Kmeans:
 			seeds.append(np.random.rand(12) * 400)
 
 		if style == 'kmeans_man':
-			for i in range(0, 10):
+			for i in range(0, 50):
 				print 'Loop ' + str(i)
 				for music in musics:
 					music['group'] = Kmeans.getdiff(music, seeds)

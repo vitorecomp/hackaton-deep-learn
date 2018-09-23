@@ -5,7 +5,7 @@ import matplotlib.pylab as plt
 import scipy.cluster.hierarchy as sch
 from sklearn.cluster import AgglomerativeClustering
 
-def run(data):
+def run(data, musics):
 
 	som = SOM(30, 30)  # initialize the SOM
 	som.fit(data, 20000)  # fit the SOM for 2000 epochs
@@ -42,3 +42,8 @@ def run(data):
 	#vizualizando a qualidade da clusterizacao
 	#plt.matshow(winners)
 	#plt.show()
+
+	for music in musics:
+		winner = som.winner(music.toObject()['valor'])
+		music.setGroupKon(winners[winner[0]][winner[1]])
+	
