@@ -7,12 +7,19 @@ class Music(Base):
 	__tablename__ = 'music'
 	id = Column(Integer, primary_key=True)
 	name = Column(String)
+	artist = Column(String)
+	activity = Column(String)
+	activity_true = Column(String)
 	valor = Column(JSON)
 	groupn = Column(Integer)
 	
 	def __init__(self, f1):
+		print '-----------------------------------------'
+		#print f1['metadata']['songs'][0]
+		print f1['metadata']['songs'][0][9]
+		print f1['metadata']['songs'][0][-2]
 		self.name  = f1['metadata']['songs'][0][-2]
-		print self.name
+		self.artist = f1['metadata']['songs'][0][9]
 
 		dataset = list(f1['analysis']['segments_timbre'])
 		dataset = np.transpose(dataset)
@@ -21,9 +28,18 @@ class Music(Base):
 		for data in dataset: 
 			self.valor.append(np.mean(data))
 
+	def hasActivity(self):
+		if(self.activity == None):
+			return False
+		else:
+			return True
+
 	def setGroup(self, group):
 		self.groupn = group
-		
+	
+	def setActvitySpotify(self, activity):
+		self.activity = activity
+
 	def toObject(self):
 		obj = {}
 		obj['id'] = self.id

@@ -13,5 +13,13 @@ setup(
     author_email='vitor.ecomp@gmail.com',
     url='',
 
-    install_requires=['sqlalchemy', 'h5py', 'numpy', 'psycopg2', 'scipy']
+    install_requires=['sqlalchemy', 
+	'h5py', 
+	'numpy', 
+	'psycopg2',
+	'matplotlib', 
+	'sklearn',
+	'scipy', 
+	'modlamp',
+	'spotipy']
 )

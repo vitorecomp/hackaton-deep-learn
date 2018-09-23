@@ -2,4 +2,8 @@ sqlalchemy
 h5py
 numpy
 psycopg2
+matplotlib
+sklearn
 scipy
+modlamp
+spotipy

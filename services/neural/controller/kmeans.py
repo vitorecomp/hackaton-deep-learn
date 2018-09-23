@@ -1,8 +1,8 @@
 import numpy as np
 from scipy.spatial import distance
 
-# style = 'kmeans_man'
-style = None
+style = 'kmeans_man'
+#style = None
 
 class Kmeans:
 	@staticmethod
