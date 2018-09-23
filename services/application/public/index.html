@@ -1,1 +1,105 @@
-teste
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Mood Booster</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+          crossorigin="anonymofa-3x us">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+<!-- Full Page Intro -->
+<div class="container mask rgba-blue-slight d-flex flex-column justify-content-around align-items-center">
+    <div class="row w-100 d-flex justify-content-center">
+        <div class="col col-md-5 p-0">
+            <div class="w-100 text-center mb-2">Meu nível de humor</div>
+            <div data-name="humor" data-value="0.2" class="humor text-center">
+                <span class="marker"></span>
+            </div>
+        </div>
+    </div>
+    <div class="row w-100 d-flex justify-content-center">
+        <div class="col col-md-5">
+            <select data-name="style" class="mdb-select" searchable="Procure aqui...">
+                <option value="aleatorio">Aleatório</option>
+                <option value="sertanejo">Pop</option>
+                <option value="pop">Pop</option>
+                <option value="reggae">Reggae</option>
+                <option value="rock">Rock</option>
+                <option value="rap">Rap</option>
+            </select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="d-flex flex-row justify-content-center align-items-center rounded-circle circle-app z-depth-1 p-2">
+                <div class="d-flex flex-row justify-content-center align-items-center rounded-circle sub-circle-app z-depth-1">
+                    <button data-name="start_stop" data-value="start" class="btn-link btn-rounded btn p-5">
+                        <span id="icon-action" class="fa fa-play text-white"></span>
+                    </button>
+                </div>
+                <span data-name="activity" data-value="jogo" class=" icon icon-1 fa-3x fas fa-gamepad"></span>
+                <span data-name="activity" data-value="hora_de_comer"
+                      class=" icon icon-2 fa-3x fas fa-utensils"></span>
+                <span data-name="activity" data-value="foco" class=" icon icon-3 fa-3x fas fa-brain"></span>
+                <span data-name="activity" data-value="para_dormir" class=" icon icon-4 fa-3x fas fa-bed"></span>
+                <span data-name="activity" data-value="romantico" class=" icon icon-5 fa-3x fas fa-heart"></span>
+                <span data-name="activity" data-value="malhacao"
+                      class=" icon icon-6 fa-3x fas fa-dumbbell"></span>
+            </div>
+        </div>
+    </div>
+    <div class="row w-100">
+        <div class="col d-flex justify-content-end">
+            <button data-name="skip" data-value="true" class="btn-link btn-rounded btn p-1">
+                <span class="fa fa-step-forward fa-4x text-info"></span>
+            </button>
+        </div>
+    </div>
+    <div id="data" data-skip="false" data-style="aleatorio" data-activity="aleatorio" class="d-none"></div>
+</div>
+<div class="mask mask-block flex-center rgba-black-strong">
+    <div class="preloader-wrapper big active crazy">
+        <div class="spinner-layer spinner-blue-only">
+            <div class="circle-clipper left">
+                <div class="circle"></div>
+            </div>
+            <div class="gap-patch">
+                <div class="circle"></div>
+            </div>
+            <div class="circle-clipper right">
+                <div class="circle"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Mask & flexbox options-->
+<!-- Full Page Intro -->
+
+<!-- SCRIPTS -->
+<!-- JQuery -->
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="js/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="js/mdb.min.js"></script>
+<!--API Spotfy-->
+<script src="https://sdk.scdn.co/spotify-player.js"></script>
+<!-- App Functions -->
+<script type="text/javascript" src="js/app.js"></script>
+</body>
+
+</html>

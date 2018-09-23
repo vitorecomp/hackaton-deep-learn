@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Palanquin+Dark');
+
+html,
+body,
+header,
+.container {
+    height: 100vh !important;
+}
+
+.mask-block {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+body {
+    background-position: center;
+    background-size: cover;
+}
+
+.circle-app {
+    min-width: 200px;
+    min-height: 200px;
+    border: 5px solid #0d47a1;
+    background-color: #ffffff;
+}
+
+.sub-circle-app {
+    min-width: 180px;
+    min-height: 180px;
+    background: #4285F4;
+}
+
+.sub-circle-app .btn span {
+    font-size: 80px;
+}
+
+.icon.selected {
+    color: #0d47a1;
+}
+
+.icon {
+    display: block;
+    position: absolute;
+    text-align: center;
+    padding: 5px;
+    color: #4285F4;
+}
+
+/*Jogos*/
+.icon-1 {
+    top: -55px;
+}
+
+/*Hora de comer*/
+.icon-2 {
+    top: 15px;
+    right: -20px;
+}
+
+/*Foco*/
+.icon-3 {
+    bottom: 15px;
+    right: -30px;
+}
+
+/*Para dormir*/
+.icon-4 {
+    bottom: -55px;
+}
+
+/*Romantico*/
+.icon-5 {
+    left: -30px;
+    bottom: 10px;
+}
+
+/*Malhação*/
+.icon-6 {
+    top: 15px;
+    left: -40px;
+}
+
+.humor {
+    max-height: 25px;
+    height: 100%;
+    background: -moz-linear-gradient(left, #a0eded, #0d47a1);
+    background: -webkit-gradient(linear, left top, right top, from(#a0eded), to(#0d47a1)) no-repeat;
+    filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=1, StartColorStr=#a0eded, EndColorStr=#0d47a1);
+}
+
+.marker {
+    max-height: 25px;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    position: absolute;
+    background-color: #0b51c5;
+    padding: 18px 0;
+    margin-top: -4px;
+}
