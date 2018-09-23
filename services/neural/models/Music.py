@@ -37,10 +37,11 @@ class Music(Base):
 			self.valor.append(np.mean(data))
 
 	def hasId(self):
-		if(self.sptid == None):
+		if self.sptid == None:
 			return False
 		else:
 			return True
+			
 	def setId(self, id):
 		self.sptid = id
 		
