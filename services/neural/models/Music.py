@@ -6,11 +6,12 @@ import numpy as np
 class Music(Base):
 	__tablename__ = 'music'
 	id = Column(Integer, primary_key=True)
+	
 	name = Column(String)
 	artist = Column(String)
 
-	activity = Column(String)
-	activity_true = Column(String)
+	activity_spoti = Column(String)
+	activity_local = Column(String)
 	
 	valor = Column(JSON)
 

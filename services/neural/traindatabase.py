@@ -7,7 +7,7 @@ from config.Database import Session
 
 from models.Music import Music
 
-from controller.kmeans import Kmeans
+from kmeans.kmeans import Kmeans
 
 mypath = './dataset/datatr/'
 

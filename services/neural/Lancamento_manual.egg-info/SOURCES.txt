@@ -1,6 +1,0 @@
-setup.py
-Lancamento_manual.egg-info/PKG-INFO
-Lancamento_manual.egg-info/SOURCES.txt
-Lancamento_manual.egg-info/dependency_links.txt
-Lancamento_manual.egg-info/requires.txt
-Lancamento_manual.egg-info/top_level.txt

@@ -12,8 +12,8 @@ def run(data):
 	
 	#targets = len(data) * [0]   # create some dummy target values
 	# vizualizando as paradas, ver se pego o que eu precido
-	# som.plot_point_map(data, targets, ['class 1', 'class 2'], filename='som.png')
-	# som.plot_class_density(data, targets, 0, filename='class_0.png', names=['a', 'b', 'c'], mode)
+	# som.plot_point_map(data, targets, ['class 1', 'class 2'], filename='./results/som.png')
+	# som.plot_class_density(data, targets, 0, filename='./results/class_0.png', names=['a', 'b', 'c'], mode)
 	# som.plot_density_map(data, filename='som1.png')
 
 	#preparando para clusterizar, denovo
