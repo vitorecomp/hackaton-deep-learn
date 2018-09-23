@@ -41,7 +41,9 @@ class Music(Base):
 			return False
 		else:
 			return True
-
+	def setId(self, id):
+		self.sptid = id
+		
 	def setGroup(self, group):
 		self.groupKmeans = group
 
