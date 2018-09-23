@@ -8,10 +8,17 @@ class Music(Base):
 	id = Column(Integer, primary_key=True)
 	name = Column(String)
 	artist = Column(String)
+
 	activity = Column(String)
 	activity_true = Column(String)
+	
 	valor = Column(JSON)
-	groupn = Column(Integer)
+
+	sptid = Column(String)
+
+	groupKmeans = Column(Integer)
+	groupKonohen = Column(Integer)
+	groupSpotidy = Column(Integer)
 	
 	def __init__(self, f1):
 		print '-----------------------------------------'
@@ -35,7 +42,14 @@ class Music(Base):
 			return True
 
 	def setGroup(self, group):
-		self.groupn = group
+		self.groupKmeans = group
+
+	def setGroupKon(self, group):
+		self.groupKonohen = group
+	
+	def setGroupSpo(self, group):
+		self.groupSpotify = group
+
 	
 	def setActvitySpotify(self, activity):
 		self.activity = activity
