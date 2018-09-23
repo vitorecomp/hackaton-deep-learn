@@ -1,4 +1,4 @@
-let access_token = 'BQDYAi0DS7QwszYsCFKOJHLGumMGxk18cdTKmtjyf1exllOecL4GdhEnoI-DiJobi3lrvffXeMOUkl0IDQvARgAtvZ3OBj3XaDTtoLaIEvybvjpX9tIC9ldHbN5ToZos6CMdDKhRaZmrknlEhsKdwJGrEu3d0jf4ZAWle017ENuwlQUbW-O-6YCAi28A';
+let access_token = 'BQDOAByTyJA6NxGiXYpZg7LVcldACnHJbBfEiQs0j1SCjmNwHe1o4C_HS4pH4cBTC6vLc3HR_m7646oxo0tCaALWe2_TJHOZvjyXAZv4xkiRqRhwaEzKwU9j_c7oYxklUUXRHKT88wgTe5jL3fUyUqSpV0Zsp1EKoG1_TzM2swqEyZD_XEZpfXvveT62';
 let dev_id = null;
 
 window.onSpotifyWebPlaybackSDKReady = () =>

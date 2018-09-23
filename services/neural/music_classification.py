@@ -22,7 +22,7 @@ def main():
 
 	musics = session.query(Music).all()
 
-	sp = spotipy.Spotify(auth='BQD6NGvR4Bck0MKu0MKLbdP5G2tvkLNBMxbxko8c523LjgjQcRJOI7ZBX3za5WVZ6wWfUwB1xleKXcBgvCg4Rw00Fu4k7zRa1F9lwj6g5_zxU6mPosRrtGUfYrFIltB5B4zufbuANJfxSR487BYfsd_oIotCpUCOVFadlLdlZTx7THPIELQzt3M5flwx')
+	sp = spotipy.Spotify(auth='BQDi9f9WdBZVDBvK6OL2COokG_oA_DGp0SYk2VCBiQgErSWdbaiQB0P4dOpAcdGrsLz45b5uwTu9R9gzutyDm6HsYrV6assT5Nki2cuV9TXg1JELZxgoN1QzM0VaDhLbgR23JF2h8tUHnUba49wDnxnSY-lFND1otF8JWl_NUqWd3oMh7TB7T3mpPkWQ')
 
 	for musicap in musics:
 		if(musicap.hasId()):
@@ -30,10 +30,13 @@ def main():
 			continue
 		music = musicap.toObject() 
 		results = sp.search(q='track:' + music['nome'] +' artist:' + music['artist'] , type='track')
-		print 'ok'
+		
 		if(len(results['tracks']['items']) == 0):
+			musicap.setId('nao')
 			print 'final'
+			session.commit()
 			continue
+		print 'ok'
 		#if(not results['tracks']):
 		#	pass
 		#	set para nao buscar a musica

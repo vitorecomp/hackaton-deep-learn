@@ -7,6 +7,11 @@ module.exports = (sequelize, DataTypes) => {
 			primaryKey: true,
 			autoIncrement: true
 		},
+		token: {
+			type:DataTypes.TEXT,
+			field:'sptid',
+		},
+
 	}, {
 		underscored: false,
 		timestamps: false
