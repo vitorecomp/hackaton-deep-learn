@@ -1,0 +1,12 @@
+.select-wrapper.is-valid .select-dropdown {
+	border-bottom-color:#28a745;
+}
+.select-wrapper.is-invalid .select-dropdown {
+	border-bottom-color:#dc3545;
+}
+.tagify {
+	min-height:56px;
+}
+.is-hidden {
+	display:none!important;
+}
