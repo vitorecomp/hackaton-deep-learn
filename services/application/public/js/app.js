@@ -1,4 +1,4 @@
-let access_token = 'BQDYAi0DS7QwszYsCFKOJHLGumMGxk18cdTKmtjyf1exllOecL4GdhEnoI-DiJobi3lrvffXeMOUkl0IDQvARgAtvZ3OBj3XaDTtoLaIEvybvjpX9tIC9ldHbN5ToZos6CMdDKhRaZmrknlEhsKdwJGrEu3d0jf4ZAWle017ENuwlQUbW-O-6YCAi28A';
+let access_token = 'BQBZJHc05WnsXLtzZoZK10ZmeoeTZakJk1GTbABG4rxBlCRbwGe8qp0x2wH3BYdW7NDF0FAhEcOWW77RH5qptEoFMQcOb2X1GKOb7pvnLMXCiCksnawA_ZwYdqG9BnMmyRDAJuyJU4c9AkcHksDfAvGRk1H4MQLpD3J9LF9x43A7f8jQ_j9N9BMlX8hg';
 let dev_id = null;
 
 window.onSpotifyWebPlaybackSDKReady = () =>
@@ -165,6 +165,10 @@ function playMusic(data)
 				body: JSON.stringify(response)
 			}).then(function(response)
 			{
+				if(!response.context)
+				{
+					$("#next").trigger('click');
+				}
 				console.log(response);
 			});
 		},
