@@ -22,20 +22,32 @@ def main():
 
 	musics = session.query(Music).all()
 
-	sp = spotipy.Spotify(auth='BQBknton4DmVtIQ3h6d-EpLhKPZf9FjBaZ4NrdGlR-DZvvGd7EChocrPzrcYUW2wRiqVFyh7s_QbHM3REuK2qHsLc0cDxEi9MKoI_b7K8wypQCJQFTpP_uxtW3aU0WJjcbDO_szd5VQgrVuAPnNIJ_9UqLKuUU_3IKzelHF2GVA57BFQWC8_V73jTEzG')
+	sp = spotipy.Spotify(auth='BQD6NGvR4Bck0MKu0MKLbdP5G2tvkLNBMxbxko8c523LjgjQcRJOI7ZBX3za5WVZ6wWfUwB1xleKXcBgvCg4Rw00Fu4k7zRa1F9lwj6g5_zxU6mPosRrtGUfYrFIltB5B4zufbuANJfxSR487BYfsd_oIotCpUCOVFadlLdlZTx7THPIELQzt3M5flwx')
 
 	for musicap in musics:
 		if(musicap.hasId()):
 			print 'already has'
+			continue
 		music = musicap.toObject() 
 		results = sp.search(q='track:' + music['nome'] +' artist:' + music['artist'] , type='track')
+		print 'ok'
+		if(len(results['tracks']['items']) == 0):
+			print 'final'
+			continue
 		#if(not results['tracks']):
 		#	pass
-			#set para nao buscar a musica
+		#	set para nao buscar a musica
 		lista = results['tracks']['items']
-		print json.dumps(lista[0], indent=4, sort_keys=True)
+
+		valor = {}
+		valor['context_uri'] = lista[0]['album']['uri']
+		valor['offset'] = {}
+		valor['offset']['position'] = lista[0]['track_number']
+		
+		musicap.setId(json.dumps(valor))
 		#busca a musica no spotify e salva o genero
 		#se o spotify tiver caido, lascou tudo, e finaliza o programa
+		session.commit()
 		
 
 if __name__ == "__main__":
